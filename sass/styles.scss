@@ -15,11 +15,12 @@
       li {
         width: 300px;
         margin: auto;
-        background-color: $dark-color;
         display: inline-block;
         margin-bottom: 20px;
+        background-color: $dark-color;
       }
     }
+    
     body {
         background-color: $bright-color;
     }
@@ -34,15 +35,27 @@
  
 @media screen and (min-width: 600px) {
     .block_family {
-      li {
+      li:nth-child(even) {
         width: 220px;
         margin: auto;
-        background-color: $light-color;
         display: inline-block; 
+        background-color: $light-color;
         margin-bottom: 10px;
         margin-right: 5px;
       }
     }
+    .block_family {
+      li:nth-child(odd) {
+        width: 220px;
+        margin: auto;
+        display: inline-block; 
+        background-color:  $dark-color;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+    }
+
+
     ul {
       max-width: 600px;
     }
@@ -59,8 +72,29 @@
 }
 
 @media screen and (min-width: 900px) {
+    //all middle blocks
     .block_family {
-      li {
+      li:nth-child(3n+2) {
+        margin: auto;
+        background-color: $light-color;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+    }
+    //all left blocks
+    .block_family {
+      li:nth-child(3n+1) {
+        margin: auto;
+        background-color: $bright-color;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 5px;
+      }
+    }
+    //all right blocks
+    .block_family {
+      li:nth-child(3n+3) {
         margin: auto;
         background-color: $bright-color;
         display: inline-block;
