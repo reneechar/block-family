@@ -13,9 +13,11 @@
 @media screen and (min-width: 0px) {
     .block_family {
       li {
+        width: 300px;
         margin: auto;
-        max-width:300px;
-        background-color: $dark-color; 
+        background-color: $dark-color;
+        display: inline-block;
+        margin-bottom: 20px;
       }
     }
     body {
@@ -33,10 +35,16 @@
 @media screen and (min-width: 600px) {
     .block_family {
       li {
+        width: 220px;
         margin: auto;
-        max-width:480px;
-        background-color: $light-color; 
+        background-color: $light-color;
+        display: inline-block; 
+        margin-bottom: 10px;
+        margin-right: 5px;
       }
+    }
+    ul {
+      max-width: 600px;
     }
     body {
         background-color: $bright-color;
@@ -54,10 +62,16 @@
     .block_family {
       li {
         margin: auto;
-        max-width:780px;
         background-color: $bright-color;
+        display: inline-block;
+        margin-bottom: 10px;
+        margin-right: 5px;
       }
     }
+    ul {
+      max-width: 900px;
+    }
+
     body {
         background-color: $dark-color;
     }
@@ -102,6 +116,5 @@ h2{
 }
  
 .block_family li{
-  margin-bottom: 20px;
   padding: 20px;
 }
