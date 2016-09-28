@@ -1,14 +1,84 @@
 // Resets, Clearfix, etc
+@import 'partials/_reset.scss';
+@import 'partials/_clearfix.scss';
 
 // Variables
- 
+ $dark-color : #1a1a1a;
+ $light-color : white;
+ $bright-color : orange;
+ $padding-size : 20px;
+
 // Media Query Ranges 
+
+@media screen and (min-width: 0px) {
+    .block_family {
+      li {
+        margin: auto;
+        max-width:300px;
+        background-color: $dark-color; 
+      }
+    }
+    body {
+        background-color: $bright-color;
+    }
+    h1 {
+      color: $dark-color;
+    }
+    h2 {
+      font-size: 35px;
+      color: $light-color;
+    }
+}
  
+@media screen and (min-width: 600px) {
+    .block_family {
+      li {
+        margin: auto;
+        max-width:480px;
+        background-color: $light-color; 
+      }
+    }
+    body {
+        background-color: $bright-color;
+    }
+    h1 {
+      color: $light-color;
+    }
+    h2 {
+      font-size: 35px;
+      color: $bright-color;
+    }
+}
+
+@media screen and (min-width: 900px) {
+    .block_family {
+      li {
+        margin: auto;
+        max-width:780px;
+        background-color: $bright-color;
+      }
+    }
+    body {
+        background-color: $dark-color;
+    }
+    h1 {
+      color: $bright-color;
+    }
+    h2 {
+      font-size: 35px;
+      color: $dark-color;
+    }
+}
+
 // Mixins
+
+@mixin block_font($block_font_size, $block_font_color){
+  font-size: $block_font_size;
+  color: $block_font_color;
+}
 
 // Styles
 body{
-  background-color: orange;
   text-align: center;
   color: #EEE;
 }
@@ -18,21 +88,20 @@ h1, h2, h3, h4{
 }
  
 h1{
+  font-size: 55px;
   padding: 20px;
 }
  
 h2{
- 
+
 }
- 
+
  
 .block_family{
-  max-width:350px;
   margin:auto;
 }
  
 .block_family li{
-  background-color: #222;
   margin-bottom: 20px;
   padding: 20px;
 }
